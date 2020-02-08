@@ -48,7 +48,7 @@ public class ArticleController {
     }
     
     @GetMapping("/update/{id}")
-    public String updateArticle(Model model, @PathVariable Long id) {
+    public String getArticleUpdate(Model model, @PathVariable Long id) {
     	Article article = articleRepository.findById(id).get();
     	System.out.println(article);
     	model.addAttribute("article", article);
@@ -56,7 +56,7 @@ public class ArticleController {
     }
     
     @PostMapping("/update/{id}")
-    public String updateArticleProcess(Model model, @PathVariable Long id, Article updatedArticle) {
+    public String setArticleUpdate(Model model, @PathVariable Long id, Article updatedArticle) {
     	Article article = articleRepository.findById(id).get();
     	article.setTitle(updatedArticle.getTitle());
     	article.setContent(updatedArticle.getContent());
