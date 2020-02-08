@@ -25,6 +25,9 @@ public class Article {
 	private String content;
 	
 	private LocalDateTime registerDate;
+	
+	@Column
+	private LocalDateTime updateDate;
 }
 
 

@@ -15,5 +15,4 @@ public class WyswygSummernoteApplication {
 	public String uploadPath() {
 		return "d:/image/";
 	}
-
 }
